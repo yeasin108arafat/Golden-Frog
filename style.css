@@ -17,6 +17,8 @@ body{
 :root{
     --poppins: "Poppins", sans-serif;
     --montserrat: "Montserrat", sans-serif;
+    --blue: #5C33F6;
+    --ag: #39b54a;
 }
 
 h1,h2{
@@ -88,3 +90,203 @@ p{
 .nm{
     margin: 0 !important;
 }
+
+
+
+/*------------------------- BANNER AREA START -------------------------*/
+.banner-area {
+    background: url(img/2.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    POSITION: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 36px;
+}
+
+.banner-area::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.menu-btn {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+.menu-btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+.menu-btn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+.menu-btn span {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--poppins);
+    letter-spacing: 4px;
+    color: var(--ag);
+    transition: 0.2s;
+}
+.menu-btn:hover span{
+    color: #fff;
+}
+.menu-btn:hover::before,
+.menu-btn:hover::after,
+.menu-btn:hover .bar{
+    background-color: var(--ag);
+}
+.menu-btn:hover{
+    color: #fff;
+}
+.menu-btn .bar{
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.banner-content-wrapper{
+    padding-bottom: 120px;
+}
+.banner-content-wrapper span {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #e1bfbf;
+    font-size: 14px;
+}
+.banner-content-wrapper h2 {
+    font-size: 60px;
+    line-height: 1.4;
+    margin-top: 0;
+    color: #FFFFFF;
+    font-weight: 800;
+    padding: 5px 0 30px;
+}
+.banner-btns a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 2px solid #ffff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-right: 10px;
+    font-family: var(--poppins);
+    letter-spacing: 5px;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 14px;
+    transition: 0.3s;
+    background-color: #fff;
+}
+.banner-btns a:nth-child(2){
+    background-color: var(--ag);
+    border-color: var(--ag);
+}
+.banner-btns a:hover{
+    background-color: transparent;
+    color: #fff;
+}
+.social-media a {
+    border: 2px solid var(--ag);
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-top: 10px;
+    background: var(--ag);
+    color: #ffffff;
+    border: 2px solid var(--ag);
+    transition: 0.2s;
+}
+.social-media a:hover{
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+.social-media {
+    position: absolute;
+    right: 50px;
+    bottom: 140px;
+}
+.banner-area .container-xxl{
+    max-width: 1520px;
+}
+.scroll-icon {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+}
+.mouse-wrapper {
+    width: 30px;
+    height: 47px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+}
+.mouse-scroller {
+    width: 3px;
+    height: 7px;
+    background: #fff;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 10px;
+    animation: bounce 1.5s infinite;
+    animation-delay: 1s;
+}
+@keyframes bounce {
+    0%{
+        
+    }
+    100% {
+        top: 20px;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+/*------------------------- BANNER AREA END -------------------------*/
