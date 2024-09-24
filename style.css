@@ -57,7 +57,7 @@ p{
     margin: 0;
 }
 .section-padding{
-
+    padding: 100px;
 }
 .sec-title{
 
@@ -127,6 +127,12 @@ p{
     font-size: 14px;
     transition: 0.3s;
     background-color: #fff;
+}
+.left-padd{
+    padding-left: 15px;
+}
+.right-padd{
+    padding-right: 15px;
 }
 
 /*------------------------- BANNER AREA START -------------------------*/
@@ -439,11 +445,29 @@ section.global-brand-area {
     width: 100%;
     object-fit: cover;
 }
-
-
-
-
-
+.quote-img img {
+    border-radius: 100%;
+    width: 800px;
+}
+.quote-left {
+    display: flex;
+    background: var(--ag);
+    border-radius: 500px;
+    max-width: 1200px;
+    margin: auto;
+}
+.quote-wrapper {
+    padding: 30px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.quote-wrapper p {
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-style: italic;
+}
 
 
 
