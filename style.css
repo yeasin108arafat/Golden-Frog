@@ -17,12 +17,13 @@ body{
 :root{
     --poppins: "Poppins", sans-serif;
     --montserrat: "Montserrat", sans-serif;
-    --blue: #5C33F6;
     --ag: #39b54a;
 }
 
-h1,h2{
-    
+h2{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.5;
 }
 ul{
     list-style: none;
@@ -91,7 +92,42 @@ p{
     margin: 0 !important;
 }
 
-
+.page-btn-green {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 2px solid var(--ag);
+    padding: 10px 20px;
+    text-align: center;
+    margin-right: 10px;
+    font-family: var(--poppins);
+    letter-spacing: 5px;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 14px;
+    transition: 0.3s;
+    background-color: var(--ag);
+}
+.page-btn-green:hover{
+    border-color: #000;
+    background: transparent;
+}
+.page-btn-white {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 2px solid #ffff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-right: 10px;
+    font-family: var(--poppins);
+    letter-spacing: 5px;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 14px;
+    transition: 0.3s;
+    background-color: #fff;
+}
 
 /*------------------------- BANNER AREA START -------------------------*/
 .banner-area {
@@ -318,10 +354,102 @@ p{
     color: #fff;
 }
 section.header-area-wrapper {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 99;
 }
 /*------------------------- BANNER AREA END -------------------------*/
+
+/*------------------------- BANNER ABOUT START -------------------------*/
+section.about-area {
+    padding: 100px 0;
+}
+.about-right p {
+    padding: 15px 0 30px;
+    font-weight: 500;
+}
+.counters {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-bottom: 30px;
+}
+.single-counter b {
+    color: var(--ag);
+    font-size: 30px;
+    display: block;
+    font-weight: 500;
+}
+.single-counter span {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+}
+.about-left {
+    display: grid;
+    grid-template-columns: 44% 54%;
+    grid-gap: 2%;
+}
+.about-left img{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+.about-left img:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.about-left img:nth-child(3) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    height: 200px;
+}
+
+/*------------------------- BANNER ABOUT END -------------------------*/
+
+section.quality-area {
+    padding-bottom: 100px;
+}
+.quality-left {
+    text-align: right;
+}
+.quality-left p {
+    padding: 15px 0 30px;
+    font-weight: 500;
+}
+section.global-brand-area {
+    background: #f5eaea;
+    padding: 100px 0;
+}
+.brand-left iframe {
+    border: 0;
+    width: 100%;
+    height: 500px;
+}
+.brand-right h2{
+    padding-bottom: 15px;
+}
+.brand-right p {
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.quality-right img {
+    height: 520px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
