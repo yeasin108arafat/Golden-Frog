@@ -54,6 +54,50 @@ $(document).ready(function() {
         smartSpeed: 300
     });
 
+    $('.product-img').on('click', function() {
+        // Get images from data attribute
+        const images = $(this).parent().data('images');
+        
+        // Get the product name dynamically
+        const productName = $(this).siblings('.product-name').text();
+    
+        // Update the modal title with the product name
+        $('#productModalLabel').text(productName);
+    
+        // Clear the gallery
+        $('#thumbnails').empty();
+    
+        // Set the main image
+        $('#mainImage').attr('src', images[0]);
+    
+        // Add thumbnails to the modal
+        images.forEach(function(image, index) {
+            const activeClass = index === 0 ? 'active-thumbnail' : ''; // Set active-thumbnail class for the first image
+            $('#thumbnails').append(`
+                <img src="${image}" class="img-fluid thumbnail-img ${activeClass}" alt="Thumbnail ${index + 1}" data-large="${image}">
+            `);
+        });
+    
+        // Show the modal
+        $('#productModal').modal('show');
+    });
+    
+    // Change the main image when clicking on a thumbnail
+    $(document).on('click', '.thumbnail-img', function() {
+        const largeImage = $(this).data('large');
+        
+        // Update the main image
+        $('#mainImage').attr('src', largeImage);
+        
+        // Remove the 'active-thumbnail' class from all thumbnails
+        $('.thumbnail-img').removeClass('active-thumbnail');
+        
+        // Add the 'active-thumbnail' class to the clicked thumbnail
+        $(this).addClass('active-thumbnail');
+    });
+    
+    
+
 
 
 });

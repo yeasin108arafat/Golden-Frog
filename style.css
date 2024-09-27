@@ -886,3 +886,137 @@ ul.footer-social-media li a:hover{
 .content-wrap {
     padding-top: 40px;
 }
+section.product-grid-area {
+    background: #f7f7f7;
+}
+.product-grid-content ul {
+    display: flex;
+}
+.product-category-list img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    opacity: 0.3;
+}
+.product-category-list li {
+    margin-right: 15px;
+    background: #fff;
+}
+.product-category-list li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 30px 0;
+    transition: 0.3s;
+}
+.product-category-list li a.active-cat,
+.product-category-list li a:hover{
+    background-color: #ddd;
+}
+.product-category-list {
+    padding-bottom: 30px;
+}
+.product-category-list span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #000;
+    font-size: 14px;
+    padding-top: 10px;
+    letter-spacing: 4px;
+}
+.product {
+    overflow: hidden;
+}
+.product-name {
+    padding: 0px 15px 15px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+.other-page-banner-content p {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+.other-page-banner-content p span {
+    font-size: 20px;
+    margin:  0 5px;
+}
+div#thumbnails {
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 0 0 5px 0px;
+}
+div#thumbnails img{
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px solid transparent;
+}
+div#thumbnails img:hover{
+    border: 1px solid #ddd;
+}
+.img-fluid.thumbnail-img.active-thumbnail:hover{
+    filter: none !important;
+    border: 1px solid #ddd;
+}
+.img-fluid.thumbnail-img.active-thumbnail {
+    border: 1px solid #ddd !important;
+}
+#productModal .modal-body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#productModal .modal-header {
+    justify-content: center;
+}
+#productModal .modal-header h5{
+    display: block;
+}
+.custom-modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full screen height to center vertically */
+}
+div#productModal {
+    height: 100vh;
+}
+
+
+
+.product-img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+}
+.main-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom-container {
+    position: relative;
+}
+
+.zoomed-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(2); /* Adjust the scale factor as needed */
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevent interference with the main image */
+}
+
+.main-img:hover .zoomed-img {
+    opacity: 1; /* Show the zoomed image on hover */
+}
