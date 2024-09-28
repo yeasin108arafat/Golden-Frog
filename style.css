@@ -1020,3 +1020,9 @@ div#productModal {
 .main-img:hover .zoomed-img {
     opacity: 1; /* Show the zoomed image on hover */
 }
+
+.brand-area-content img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
