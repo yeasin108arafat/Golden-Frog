@@ -17,7 +17,8 @@ body{
 :root{
     --poppins: "Poppins", sans-serif;
     --montserrat: "Montserrat", sans-serif;
-    --ag: #39b54a;
+    /* --ag: #39b54a; */
+    --ag: #FFBE00;
 }
 
 h2{
@@ -145,7 +146,7 @@ p{
 
 /*------------------------- BANNER AREA START -------------------------*/
 .banner-area {
-    background: url(img/2.jpg) no-repeat center;
+    background: url(img/colorful-leather-fabric-samples-showcase.jpg) no-repeat center;
     background-size: cover;
     POSITION: relative;
     z-index: 3;
@@ -547,7 +548,7 @@ section.global-brand-area {
     background: #232323;
 }
 .footer-widget h4 {
-    color: #fff;
+    color: var(--ag);
     font-family: var(--poppins);
     text-transform: uppercase;
     font-size: 18px;
@@ -555,7 +556,7 @@ section.global-brand-area {
     padding-bottom: 20px;
 }
 .footer-widget ul li, .footer-widget ul li a {
-    color: #d3b2b2;
+    color: #fff;
     margin-bottom: 8px;
     font-size: 15px;
 }
@@ -564,7 +565,7 @@ section.global-brand-area {
 }
 .footer-widget ul li b {
     display: block;
-    color: #fff;
+    color: var(--ag);
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
@@ -751,31 +752,64 @@ ul.footer-social-media li a:hover{
 
 
  .production-process-content ul {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 30px;
+    position: relative;
+}
+.production-process-content ul::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #ddd;
+    margin: auto;
 }
 .production-process-content li {
-    padding: 20px;
     border: 2px solid #ddd;
     position: relative;
     counter-increment: item;
+    max-width: 44.5%;
+    text-align: right;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 185px;
+}
+.production-process-content li:nth-child(2n) {
+    margin-left: auto;
+    text-align: left;
+    grid-template-columns: 70% 30%;
 }
 .production-process-content li::before {
     content: "0"counter(item);
     position: absolute;
-    right: -9px;
-    top: -31px;
-    font-size: 50px;
+    right: -74px;
+    top: -2px;
+    font-size: 36px;
     font-weight: 900;
     font-family: 'Poppins';
-    background: #fff;
-    color: #ddd;
-    padding: 15px 0 0px 15px;
+    color: #000;
+    background: #ddd;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.production-process-content li:nth-child(2n):before {
+    left: -74px;
+}
+.production-process-content li img {
+    height: 100%;
+    object-fit: cover;
+}
+.production-process-content li div {
+    padding: 20px;
 }
  .production-process-content h4 {
     font-weight: 700;
-    padding: 10px 0 5px;
+    padding: 0px 0 5px;
     font-size: 20px;
 }
 .production-process-content p {
@@ -1021,8 +1055,52 @@ div#productModal {
     opacity: 1; /* Show the zoomed image on hover */
 }
 
-.brand-area-content img {
-    height: 230px;
-    width: 100%;
-    object-fit: cover;
+.our-brands-area {
+    background: #f7f7f7;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+
+/* Slider container to limit the display area */
+.slider-container {
+    width: 100%; /* Or the width you desire */
+    overflow: hidden; /* To hide the extra content */
+  }
+  
+  /* Inner slider to animate */
+  .slider {
+    display: flex;
+    animation: slide 30s linear infinite;
+  }
+  
+  /* Image setup */
+  .slider img {
+    width: 100%; /* Ensure the image takes the full width */
+  }
+  
+  /* Keyframes for sliding effect */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  
+
+
+.left-img,
+.left-content{
+    padding-right: 15px;
+}
+.right-content,
+.right-img{
+    padding-left: 15px;
+}
+.left-content{
+    text-align: right;
 }
